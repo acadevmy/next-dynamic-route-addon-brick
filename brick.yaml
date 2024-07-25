@@ -1,4 +1,4 @@
-name: next-dynamic-route-addon-brick
+name: next_dynamic_route_addon_brick
 description: A new brick created with the Devmy CLI.
 # repository: https://github.com/acadevmy/my_repo
 version: 0.1.0
@@ -17,7 +17,23 @@ environment:
 #  * a list of values (enums only)
 #  * an optional separator (list only)
 vars:
-  brickName:
+  dynamicParamName:
     type: string
-    description: The brick Name
-    prompt: What is the name of this brick?
+    description: The dynamic route parameter name
+    default: slug
+    prompt: What is the name of the dynamic route parameter?
+  pageName:
+    type: string
+    description: The name of the dynamic page
+    default: Page
+    prompt: What is the name of the dynamic page?
+  type:
+    type: string
+    description: The type key for the parameters
+    default: page
+    prompt: What is the type key for the parameters?
+  path:
+    type: string
+    description: The root path of the dynamic route
+    default: src/app
+    prompt: What is the root path of the dynamic route?
