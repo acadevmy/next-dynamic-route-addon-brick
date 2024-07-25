@@ -32,8 +32,3 @@ vars:
     description: The type key for the parameters
     default: dynamic-route
     prompt: What is the type key for the parameters?
-  path:
-    type: string
-    description: The root path of the dynamic route
-    default: src/app
-    prompt: What is the root path of the dynamic route?
