@@ -11,7 +11,3 @@ export interface {{pageName.pascalCase()}}PageParams extends {{pageName.pascalCa
 export interface {{pageName.pascalCase()}}PageProps {
   params: {{pageName.pascalCase()}}PageParams;
 }
-
-export type PagesParams = {{pageName.pascalCase()}}PageParams;
-
-export type SearchParams = Record<string, string> | undefined;
