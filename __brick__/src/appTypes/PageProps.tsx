@@ -1,4 +1,4 @@
-import { RootParams } from "@/appTypes/rootProps";
+import { RootParams } from "@/appTypes/RootProps";
 
 export interface {{pageName.pascalCase()}}PageParamsRoute extends RootParams {
   {{dynamicParamName.snakeCase()}}: string;

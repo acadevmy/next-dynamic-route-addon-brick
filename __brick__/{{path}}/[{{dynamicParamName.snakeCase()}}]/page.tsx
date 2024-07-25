@@ -1,16 +1,16 @@
 import { Metadata } from "next";
 
 import { {{pageName.pascalCase()}}PageParamsRoute, {{pageName.pascalCase()}}PageProps } from "@/appTypes/PageProps";
-import { getMetadataFromCmsSeo } from "@/utils/metadata";
+import { getMetadata } from "@/utils/metadata";
 
 const fixedListPageFilter = false;
 
 export const generateMetadata = async ({
   params,
-}: DynamicPageProps): Promise<Metadata | null> => {
+}: {{pageName.pascalCase()}}PageProps): Promise<Metadata | null> => {
   if (!params.{{dynamicParamName.snakeCase()}}) return null;
   
-  return getMetadataFromCmsSeo();
+  return getMetadata();
 };
 
 export const generateStaticParams = async () => {
@@ -25,4 +25,4 @@ const {{pageName.pascalCase()}}Page = async ({ params }: {{pageName.pascalCase()
   );
 };
 
-export default {{pageName.pascalCase()}};
+export default {{pageName.pascalCase()}}Page;
